@@ -49,6 +49,7 @@ const DApp = () => {
           <button onClick={handleConnect} disabled={isLoading}>
             {isLoading ? 'Connecting...' : 'Connect Wallet'}
           </button>
+          <p>Connected Wallet: {smartWalletAuthorityPubkey}</p>
           
         </div>
       )}
