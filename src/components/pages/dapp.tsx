@@ -3,6 +3,7 @@ import { useWallet } from '@lazorkit/wallet';
 
 const DApp = () => {
   const {
+    publicKey,
     isConnected,
     isLoading,
     error,
@@ -41,7 +42,8 @@ const DApp = () => {
       <h1>Lazor Kit Wallet Integration</h1>
       {isConnected ? (
         <div>
-          <p>Connected Wallet: {smartWalletAuthorityPubkey}</p>
+          <p className='bg-black text-white'>Connected Wallet: {smartWalletAuthorityPubkey}</p>
+          {publicKey}
           <button onClick={handleDisconnect}>Disconnect</button>
           {/* <button onClick={handleSignMessage}>Sign Message</button> */}
         </div>
