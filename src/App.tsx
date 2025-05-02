@@ -1,9 +1,8 @@
+import DApp from "./components/pages/dapp";
 
 function App() {
   
-  return (
-    <div>d</div>
-   )
+  return <DApp/>
 }
 
 export default App
