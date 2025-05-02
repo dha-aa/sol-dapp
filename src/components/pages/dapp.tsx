@@ -1,5 +1,6 @@
 import { useWallet } from '@lazorkit/wallet';
 
+
 const DApp = () => {
   const {
     isConnected,
