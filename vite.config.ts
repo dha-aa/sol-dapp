@@ -1,11 +1,15 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
 import inject from '@rollup/plugin-inject';
 import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill';
 import { NodeModulesPolyfillPlugin } from '@esbuild-plugins/node-modules-polyfill';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
+  plugins: [
+    react(),
+    tailwindcss(),
+  ],
   optimizeDeps: {
     esbuildOptions: {
       define: {
@@ -22,8 +26,6 @@ export default defineConfig({
   build: {
     rollupOptions: {
       plugins: [
-        react(),
-        tailwindcss(),
         inject({
           Buffer: ['buffer', 'Buffer']
         })
